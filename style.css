@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6deb8;
+    color: #443e46; /* overall text */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* HEADER AND NAV */
+header {
+    display: flex; /* easy to rap */
+    align-items: center; /* Title centers */
+    justify-content: space-between; /* seperates the items */
+    color: #000000;
+    padding: 20px; /* away from edges */
+}
+
+nav {
+    padding: 10px; /* away from rigth side */
+}
+
+nav ul { /* easy to wrap, style, and gap each link equally */
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+nav li { /* creating that box like btn */
+    background-color: #c57284;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CHAP 11 DROP DOWN NAV */
+nav ul ul {
+    position: absolute;
+    background-color: #908ca4;
+    padding: 0;
+    display: none;
+}
+nav ul ul li {
+    border: 5px solid #908ca4;
+    display: block;
+    width: 8em;
+    padding-left: 1em;
+    margin-left: 0;
+}
+nav li:hover ul {
+    display: block;
+}
+
+/* SECTIONS IN MAIN */
+section {
+    margin-bottom: 40px; /* each sectio is spaced out for readability */
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+/* HERO SECTION LAYOUT */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+#hero-text {
+    width: 50%;
+}
+
+#hero-image img {
+    background-color: #908ca4;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* CONTENT SECTION LAYOUT */
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    color: #f6deb8;
+}
+
+.column {
+    background-color: #57659e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #908ca4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MECHANICS VIDEO AND TEXT */
+#video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video {
+    background-color: #908ca4;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* RESOURCES AND LINKS */
+#resources {
+    background-color: #c57284;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#resources ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%; /* need to set links with bg color to specific content seperatly */
+}
+
+/* FOOTER */
+footer {
+    background-color: #443e46;
+    color: #f6deb8;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: #f6deb8;
+    text-decoration: none;
+}
