@@ -1,28 +1,26 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     background-color: #f6deb8;
-    color: #443e46; /* overall text */
+    color: #443e46; 
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
-
 /* HEADER AND NAV */
 header {
-    display: flex; /* easy to rap */
-    align-items: center; /* Title centers */
-    justify-content: space-between; /* seperates the items */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
     color: #000000;
-    padding: 20px; /* away from edges */
+    padding: 20px;
 }
 
 nav {
-    padding: 10px; /* away from rigth side */
+    padding: 10px; 
 }
 
-nav ul { /* easy to wrap, style, and gap each link equally */
+nav ul { 
     display: flex;
     justify-content: flex-start;
     gap: 10px;
@@ -30,7 +28,8 @@ nav ul { /* easy to wrap, style, and gap each link equally */
     padding: 0;
 }
 
-nav li { /* creating that box like btn */
+nav li {
+    position: relative; 
     background-color: #c57284;
     padding: 10px 15px;
     border-radius: 6px;
@@ -41,25 +40,26 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
-
 /* CHAP 11 DROP DOWN NAV */
 nav ul ul {
     position: absolute;
-    background-color: #908ca4;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0;
     display: none;
+    z-index: 10;
 }
 nav ul ul li {
-    border: 5px solid #908ca4;
     display: block;
-    width: 8em;
-    padding-left: 1em;
-    margin-left: 0;
+    width: 7em;
+    padding: 15px;
+    margin: 0;
+    border-radius: 10px;
 }
 nav li:hover ul {
     display: block;
 }
-
 /* SECTIONS IN MAIN */
 section {
     margin-bottom: 40px; /* each sectio is spaced out for readability */
@@ -70,7 +70,6 @@ section {
     margin: 0 auto;
     padding: 0 80px;
 }
-
 /* HERO SECTION LAYOUT */
 #hero {
     display: flex;
@@ -88,7 +87,6 @@ section {
     width: 400px;
     border-radius: 10px;
 }
-
 /* CONTENT SECTION LAYOUT */
 .row {
     display: grid;
@@ -105,7 +103,6 @@ section {
     display: flex;
     flex-direction: column;
 }
-
 /* MECHANICS VIDEO AND TEXT */
 #video-section {
     display: flex;
@@ -122,7 +119,6 @@ video {
     border-radius: 10px;
     margin-top: 10px;
 }
-
 /* RESOURCES AND LINKS */
 #resources {
     background-color: #c57284;
@@ -142,7 +138,88 @@ video {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 80%; /* need to set links with bg color to specific content seperatly */
+    width: 80%; 
+}
+
+/* MECHANICS PAGEs */ 
+.mechanics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #57659e;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#mechanics-banner img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.mechanics-content {
+    flex: 3;
+}
+
+.mechanics-layout {
+    display: flex;
+    flex-direction: column; /* problem here, simple fix */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #908ca4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.compare-header {
+    background-color: #908ca4;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#compare-banner {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#compare-banner img {
+    flex: 1;
+    width: 0;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px #000000;
+}
+
+/* COMPARE PAGE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #443e46;
+}
+
+th {
+    background-color: #c57284;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color: #908ca4;
+    color: white;
+    padding: 10px;
+    border: 1px solid #443e46;
 }
 
 /* FOOTER */
