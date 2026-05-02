@@ -35,6 +35,27 @@ nav li {
     border-radius: 6px;
 }
 
+a, button {
+    transition: all 0.3s ease; /* smooth transition for hover effects */
+}
+
+nav li:hover {
+    background-color: #443e46;
+}
+
+button {
+    background-color: #c57284;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #57659e;
+}
+
 nav a {
     color: white;
     text-decoration: none;
@@ -45,7 +66,7 @@ nav ul ul {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* fix: centers the dropdown */
     padding: 0;
     display: none;
     z-index: 10;
@@ -165,9 +186,8 @@ video {
 
 .mechanics-layout {
     display: flex;
-    flex-direction: column; /* problem here, simple fix */
-    gap: 30px;
-    margin-top: 30px;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .sidebar {
@@ -184,6 +204,62 @@ video {
     padding: 30px;
     border-radius: 10px;
     text-align: center;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px #443e46;
+}
+
+.contact-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-form {
+    flex: 2;
+    background-color: #57659e;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px #908ca4;
+}
+
+.contact-info {
+    flex: 1;
+    background-color: #908ca4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    background-color: #c57284;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #443e46;
 }
 
 #compare-banner {
@@ -239,4 +315,26 @@ footer ul {
 footer a {
     color: #f6deb8;
     text-decoration: none;
+}
+
+iframe {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr; /* stack columns on small screens */
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-layout {
+        flex-direction: column;
+    }
 }
